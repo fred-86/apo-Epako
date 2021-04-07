@@ -1,0 +1,19 @@
+# See dos how to configure the bundle: https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html
+liip_imagine:
+    # valid drivers options include "gd" or "gmagick" or "imagick"
+    driver: "gd"
+    resolvers:
+        # flysystem_resolver:
+        #     flysystem:
+        #         root_url: '%uploads_base_url%'
+        place_logo:
+          web_path:
+            # use %kernel.project_dir%/web for Symfony prior to 4.0.0
+            web_root: "%kernel.project_dir%/public/%app.path.place_logo%"
+            cache_prefix: "media/cache"
+    filter_sets:
+        squared_thumbnail_medium:
+            filters:
+                thumbnail:
+                    size:          [200, 200]
+                    mode:          outbound

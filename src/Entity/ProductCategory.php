@@ -19,7 +19,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\HasLifecycleCallbacks()
  * @UniqueEntity(
  *    fields={"name"},
- *    message="le nom doit existe déjà"
+ *    message="le nom existe déjà"
  * )
  */
 class ProductCategory

@@ -8,6 +8,8 @@ parameters:
     app.path.place_logo: uploads/images/placelogos
     app.path.placecategory_picto: uploads/images/placecategorypictos
     app.path.productcategory_picto: uploads/images/productcategorypictos
+    uploads_dir_name: 'uploads-BO'
+    uploads_base_url: '/%uploads_dir_name%'
 
 services:
     # default configuration for services in *this* file

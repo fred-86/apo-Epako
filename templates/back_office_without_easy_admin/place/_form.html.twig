@@ -1,0 +1,54 @@
+{{ form_start(form) }}
+    {# {{ form_widget(form) }} #}
+    <div class="form-group">
+        <label for="name" class="required">Nom</label>
+        {{ form_row(form.name,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="adresse" >adresse</label>
+        {{ form_row(form.address,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="Complementadresse" >Complement d'adresse</label>
+        {{ form_row(form.addressComplement,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="City" class="required">Ville</label>
+        {{ form_row(form.city,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="department" class="required">Departement</label>
+        {{ form_row(form.department,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="url" class="required">Site internet</label>
+        {{ form_row(form.url,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="content" class="required">Description</label>
+        {{ form_row(form.content,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="title" class="required">Logo</label>
+        {{ form_row(form.imageFile,{'label' : false}) }}
+        {% if place.image %}
+        <img class="imgSize" src="{{asset('uploads/images/placelogos/' ~ place.image) }}">
+        {% endif %}
+    </div>
+    <div class="form-group">
+        <label for="status" class="required">Status</label>
+        {{ form_row(form.status,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="placeCategory" class="required">Categorie</label>
+        {{ form_row(form.placeCategory,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <label for="productCategories" class="required">Categorie de produit</label>
+        {{ form_row(form.productCategories,{'label' : false}) }}
+    </div>
+    <div class="form-group">
+        <p class="required">champ requis</p>
+    </div>
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

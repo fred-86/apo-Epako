@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Place{% endblock %}
+
+{% block body %}
+<div class="col-md-8 mt-4 ">
+    <div class="jumbotron">
+        <h1>Create new Place</h1>
+
+        {{ include('back_office_without_easy_admin/place/_form.html.twig') }}
+        <a class="btn btn-outline-primary mt-2" href="{{ path('back_office_place_browse') }}" role="button">Retour</a>
+    </div>
+</div>
+   
+    
+{% endblock %}

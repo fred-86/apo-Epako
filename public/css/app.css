@@ -1,0 +1,18 @@
+.imgSize {
+  width: 100px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.required::after {
+  color: #dc3545;
+  content: " *";
+}
+
+p.required {
+  color: #dc3545;
+  text-transform: lowercase;
+  font-size: smaller;
+}
