@@ -37,4 +37,5 @@ class PlaceCrudController extends AbstractCrudController
             AssociationField::new('placeCategory')->hideOnIndex()->setRequired(true),
         ];
     }
+
 }

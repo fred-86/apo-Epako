@@ -29,7 +29,7 @@ class UserCrudController extends AbstractCrudController
             Field::new('nickname'),
             ChoiceField::new('status')->setChoices([0 => 0, 1 => 1, 2 => 2 ])->setHelp('0 = actif / 1 = inactif / 2 = banned'),
             //solution pour encoder le password https://grafikart.fr/forum/33951
-            Field::new('password')->setFormType(PasswordType::class)->hideOnIndex(),
+            Field::new('password')->setFormType(PasswordType::class)->hideOnIndex()->onlyWhenCreating(),
         ];
     }
 }
