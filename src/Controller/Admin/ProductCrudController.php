@@ -51,17 +51,16 @@ class ProductCrudController extends AbstractCrudController
         //    $listSubCategories = $qb->select('pc.name')
         //        ->from('product_category', 'pc')
         //        ->where('pc.parent IS NULL')->andwhere("pc.name NOT LIKE '%endance%'");
-   
+
         //    return $listSubCategories;
         // }
-        
+
         // $em = $this->get(EntityRepository::class);
         // $em->createQueryBuilder();
         // $listSubCategories =$em->findAllNameSubCategoryWithoutTendance();
 
         //$response = $this->get(EntityRepository::class);
- 
-        
+
         //  $em = $this->get(EntityManagerInterface::class);
         //  $qb = $em->createQueryBuilder();
         //  $listSubCategories = $qb->select('pc.name')

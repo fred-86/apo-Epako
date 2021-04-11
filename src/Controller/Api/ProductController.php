@@ -95,5 +95,5 @@ class ProductController extends AbstractController
         return $this->json($productItem, 200, [], ['groups' => 'api_product_browse']);
     }
 
-   
+
 }
